@@ -9,5 +9,4 @@
   personal_website_url: student.personal_website_url,
   github_url: student.github_url,
   city_state: student.city_state,
-  experiences: 
 }
