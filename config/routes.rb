@@ -14,5 +14,8 @@ namespace :api do
   patch '/projects/:id' => 'projects#update'
   delete 'projects/:id' => 'projects#destroy'
   post '/sessions' => 'sessions#create'
-  end
-end
+
+
+  get '/educations/:id' => 'educations#show'
+  post '/educations' => 'educations#create'
+
