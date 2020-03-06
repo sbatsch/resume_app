@@ -1,6 +1,5 @@
 class Api::EducationsController < ApplicationController
 
-
   def create
     @education = Education.new(
       student_id: Student.first.id, 

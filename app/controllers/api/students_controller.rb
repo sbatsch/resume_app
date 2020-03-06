@@ -9,24 +9,21 @@ class Api::StudentsController < ApplicationController
     render 'show.json.jb'
   end
 
-  # def create
-  #   @student = Student.new(first_name: params[:first_name],
-  #                          last_name: params[:last_name],
-  #                          email: params[:email],
-  #                          phone_number: params[:phone_number],
-  #                          short_bio: params[:short_bio],
-  #                          linkedin_url: params[:linkedin_url],
-  #                          personal_website_url: params[:personal_website_url],
-  #                          github_url: params[:github_url],
-  #                          city_state: params[:city_state],
-  #                          password: params[:password],
-  #                          password_confirmation: params[:password_confirmation]
-  #                         )
-  #   if @student.save
-  #     render 'show.json.jb'
-  #   else
-  #     render json: {errors: @student.errors.full_messages}, status: :unprocessable_entity
-  #   end 
-  # end 
+  def update
+    @student = Student.find(params[:id])
+    @student.first_name = params[:first_name] || @student.first_name
+    @student.last_name = params[:last_name] || @student.last_name
+    @student.email = params[:email] || @student.email
+    @student.phone_number = params[:phone_number] || @student.phone_number
+    @student.short_bio = params[:short_bio] || @student.short_bio
+    @student.linkedin_url = params[:linkedin_url] || @student.linkedin_url
+    @student.personal_website_url = params[:personal_website_url] || @student.personal_website_url
+    @student.github_url = params[:github_url] || @student.github_url
+    @student.city_state = params[:city_state] || @student.city_state
+    @student.password = params[:password] || @student.password
+
+    @student.save
+    render 'show.json.jb'
+  end
 end
 

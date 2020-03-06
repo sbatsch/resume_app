@@ -1,5 +1,5 @@
 class Api::SessionsController < ApplicationController
-  def create
+  # def create
 #     puts "=" * 30
 #     p params[:email]
 #     p params[:password]
@@ -18,5 +18,5 @@ class Api::SessionsController < ApplicationController
 #     else
 #       render json: {}, status: :unauthorized
 #     end
-  end
+  # end
 end
