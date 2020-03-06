@@ -18,4 +18,6 @@ namespace :api do
 
   get '/educations/:id' => 'educations#show'
   post '/educations' => 'educations#create'
+  end
+end  
 
