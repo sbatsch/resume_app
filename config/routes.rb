@@ -5,5 +5,8 @@ namespace :api do
   get '/students/:id' => 'students#show'
 
   post '/sessions' => 'sessions#create'
+
+  get '/educations/:id' => 'educations#show'
+  post '/educations' => 'educations#create'
 end
 end
