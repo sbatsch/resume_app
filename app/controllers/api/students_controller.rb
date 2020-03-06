@@ -20,10 +20,14 @@ class Api::StudentsController < ApplicationController
     @student.personal_website_url = params[:personal_website_url] || @student.personal_website_url
     @student.github_url = params[:github_url] || @student.github_url
     @student.city_state = params[:city_state] || @student.city_state
-    @student.password = params[:password] || @student.password
+    # @student.password = params[:password] || @student.password
 
-    @student.save
-    render 'show.json.jb'
+
+    if @student.save!
+      render 'show.json.jb'
+    else
+      render json: { errors: @student.errors.full_messages }, status: :unprocessable_entity
+    end 
   end
 end
 

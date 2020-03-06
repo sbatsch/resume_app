@@ -25,7 +25,7 @@ class Api::ProjectsController < ApplicationController
     @project.description = params[:description] || @project.description
     @project.url = params[:url] || @project.url
   
-    @skill.save
+    @project.save
     render 'show.json.jb'
   end 
 
