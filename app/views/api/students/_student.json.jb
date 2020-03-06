@@ -9,8 +9,8 @@
   personal_website_url: student.personal_website_url,
   github_url: student.github_url,
   city_state: student.city_state,
-  educations: student.educations.map {|education| render partial: "api/educations/education.json.jb", locals: {education: education}},
-  skills: student.skills.map {|skill| render partial: "api/skills/skill.json.jb", locals: {skill: skill}},
-  projects: student.projects.map {|project| render partial: "api/projects/project.json.jb", locals: {project: project}},
-  experiences: student.experiences.map {|experience| render partial: "api/experiences/experience.json.jb", locals: {experience: experience}}
+  educations: student.educations.map { |education| render partial: "api/educations/education.json.jb", locals: {education: education} },
+  skills: student.skills.map { |skill| render partial: "api/skills/skill.json.jb", locals: {skill: skill} },
+  projects: student.projects.map { |project| render partial: "api/projects/project.json.jb", locals: {project: project} },
+  experiences: student.experiences.map { |experience| render partial: "api/experiences/experience.json.jb", locals: {experience: experience} }
 }

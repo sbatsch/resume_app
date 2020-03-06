@@ -1,4 +1,8 @@
-
+Student.destroy_all
+Education.destroy_all
+Experience.destroy_all
+Project.destroy_all
+Skill.destroy_all
 
 
 student = Student.create(
