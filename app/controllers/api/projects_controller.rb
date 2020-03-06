@@ -21,7 +21,7 @@ class Api::ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
 
-    @project.description = params[:name] || @project.name
+    @project.name = params[:name] || @project.name
     @project.description = params[:description] || @project.description
     @project.url = params[:url] || @project.url
   

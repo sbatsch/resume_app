@@ -21,7 +21,7 @@ student = Student.create(
 
 education = Education.create(
                              start_date: 5.years.ago,
-                             end_date: 1.year.ago,
+                             end_date: 1.year.ago
                              university_name: "Temple",
                              degree: "Philosophy",
                              details: "He thought; therefore, he was.",
