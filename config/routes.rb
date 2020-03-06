@@ -3,6 +3,7 @@ namespace :api do
   get '/students' => 'students#index'
   post '/students' => 'students#create'
   get '/students/:id' => 'students#show'
+  patch '/students/:id' => 'students#update'
 
   post '/skills' => 'skills#create'
   get '/skills/:id' => 'skills#show'
@@ -13,6 +14,7 @@ namespace :api do
   get '/projects/:id' => 'projects#show'
   patch '/projects/:id' => 'projects#update'
   delete 'projects/:id' => 'projects#destroy'
+  
   post '/sessions' => 'sessions#create'
 
 
