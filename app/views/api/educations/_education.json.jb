@@ -1,4 +1,6 @@
-{ start_date: education.start_date,
+{ 
+  id: education.id,
+  start_date: education.start_date,
   end_date: education.end_date,
   university_name: education.university_name,
   degree: education.degree,

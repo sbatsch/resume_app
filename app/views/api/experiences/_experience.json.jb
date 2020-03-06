@@ -1,4 +1,5 @@
 { 
+  id: experience.id,
   company_name: experience.start_date,
   start_date: experience.start_date, 
   end_date: experience.end_date,
