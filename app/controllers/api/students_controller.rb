@@ -1,4 +1,6 @@
 class Api::StudentsController < ApplicationController
+  before_action :authenticate_student, except: [:index, :show]
+
   def index
     @students = Student.all
     render 'index.json.jb'
@@ -8,6 +10,7 @@ class Api::StudentsController < ApplicationController
     @student = Student.find(params[:id])
     render 'show.json.jb'
   end
+
 
   def update
     @student = Student.find(params[:id])
