@@ -1,5 +1,5 @@
 class Api::ProjectsController < ApplicationController
-  before_action :authenticate_student, except: [:index, :show]
+  # before_action :authenticate_student, except: [:index, :show]
   
   def create
     @project = Project.new(

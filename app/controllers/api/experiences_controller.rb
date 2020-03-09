@@ -1,6 +1,6 @@
 class Api::ExperiencesController < ApplicationController
 
-  before_action :authenticate_student, except: [:index, :show]
+  # before_action :authenticate_student, except: [:index, :show]
 
   def create
     @experience = Experience.new(

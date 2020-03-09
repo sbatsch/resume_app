@@ -1,5 +1,5 @@
 class Api::SkillsController < ApplicationController
-  before_action :authenticate_student, except: [:index, :show]
+  # before_action :authenticate_student, except: [:index, :show]
   
   def create
     @skill = Skill.new(
